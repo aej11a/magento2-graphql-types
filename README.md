@@ -13,7 +13,7 @@ Another example: For Magento 2.6.5, this package will use the version numbers 6.
 ## Example
 
 ```js
-import { CmsPage } from '../../magento2-graphql-types'
+import { CmsPage } from 'magento2-graphql-types'
 
 const getData = async () => {
     const res = await fetch('https://venia.magento.com/graphql?query=query+getCmsPage%28%24id%3AInt%21%29%7BcmsPage%28id%3A%24id%29%7Burl_key+content+content_heading+title+page_layout+meta_title+meta_keywords+meta_description+__typename%7D%7D&operationName=getCmsPage&variables=%7B%22id%22%3A7%7D')

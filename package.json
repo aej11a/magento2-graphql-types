@@ -1,7 +1,7 @@
 {
     "name": "magento2-graphql-types",
     "description": "TypeScript definitions for the Magento 2 Graphql API",
-    "version": "4.1.0",
+    "version": "4.1.1",
     "main": "index.d.ts",
     "keywords": [
       "magento",
