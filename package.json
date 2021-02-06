@@ -1,0 +1,19 @@
+{
+    "name": "magento2-graphql-types",
+    "description": "TypeScript definitions for the Magento 2 Graphql API",
+    "version": "4.1.0",
+    "main": "index.d.ts",
+    "keywords": [
+      "magento",
+      "magento2",
+      "typescript",
+      "magento 2 typescript",
+      "magento 2 types"
+    ],
+    "author": "Andrew Jones <aej11@outlook.com> (https://www.linkedin.com/in/ajones55/)",
+    "license": "MIT",
+    "bugs": {
+      "url": "https://github.com/aej11a/magento2-graphql-types/issues"
+    },
+    "homepage": "https://github.com/aej11a/magento2-graphql-types"
+  }
