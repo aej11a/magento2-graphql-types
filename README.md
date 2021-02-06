@@ -10,17 +10,21 @@ Since this repo and project is dedicated to Magento 2, the _first_ two digits in
 
 Another example: For Magento 2.6.5, this package will use the version numbers 6.5.0, 6.5.1, 6.5.2, etc.
 
-## A Contrived Example
+## Example
 
 ```js
-import fetch from 'node-fetch'
-import { CmsPage } from 'magento2-graphql-types'
+import { CmsPage } from '../../magento2-graphql-types'
 
 const getData = async () => {
     const res = await fetch('https://venia.magento.com/graphql?query=query+getCmsPage%28%24id%3AInt%21%29%7BcmsPage%28id%3A%24id%29%7Burl_key+content+content_heading+title+page_layout+meta_title+meta_keywords+meta_description+__typename%7D%7D&operationName=getCmsPage&variables=%7B%22id%22%3A7%7D')
     const resJson = await res.json()
+    
     const data = resJson.data.cmsPage as CmsPage
-    console.log(data.title)
+
+    if(data.__typename === "Test"){ 
+        //ts2367: This condition will always return 'false' since the types '"CmsPage" | undefined' and '"Test"' have no overlap.
+        console.log("This never runs!")
+    }
 }
 
 getData()
